@@ -19,6 +19,7 @@ namespace RetinaOnlineServer.WebApi.Configurations
             services.AddScoped<IUCAFQueryRepository, UCAFQueryRepository>();
             services.AddScoped<IContextService, ContextService>();
             services.AddScoped<IUCAFService, UCAFService>();
+            services.AddScoped<IRoleService, RoleService>();
         }
     }
 }

@@ -37,10 +37,12 @@ namespace RetinaOnlineServer.Persistance.Context
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Ignore<IdentityUserLogin<string>>();
-            builder.Ignore<IdentityUserRole<string>>();
-            builder.Ignore<IdentityUserClaim<string>>();
-            builder.Ignore<IdentityUserToken<string>>();
+            //builder.Ignore<IdentityUserLogin<string>>();
+            //builder.Ignore<IdentityUserRole<string>>();
+            //builder.Ignore<IdentityUserClaim<string>>();
+            //builder.Ignore<IdentityUserToken<string>>();
+            //builder.Ignore<IdentityRoleClaim<string>>();
+            base.OnModelCreating(builder);
         }
 
         public class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>

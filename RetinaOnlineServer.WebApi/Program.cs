@@ -25,19 +25,19 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-using (var scoped = app.Services.CreateScope())
-{
-    var userManager = scoped.ServiceProvider.GetRequiredService<UserManager<AppUser>>();
-    if (!userManager.Users.Any())
-    {
-        userManager.CreateAsync(new AppUser
-        {
-            UserName = "sadikg",
-            Email = "sadik@gmail.com",
-            Id = Guid.NewGuid().ToString(),
-            NameLastName = "Sadýk gok"
-        }, "Password12*").Wait();
-    }
-}
+//using (var scoped = app.Services.CreateScope())
+//{
+//    var userManager = scoped.ServiceProvider.GetRequiredService<UserManager<AppUser>>();
+//    if (!userManager.Users.Any())
+//    {
+//        userManager.CreateAsync(new AppUser
+//        {
+//            UserName = "sadikg",
+//            Email = "sadik@gmail.com",
+//            Id = Guid.NewGuid().ToString(),
+//            NameLastName = "Sadýk gok"
+//        }, "Password12*").Wait();
+//    }
+//}
 
 app.Run();
